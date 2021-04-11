@@ -1,0 +1,11 @@
+<select class="form-select" aria-label="Default select example">
+  <option [class]="getAllColorClass()" routerLink="/cars/getcarsdetails" selected>Tüm Renkler</option>
+  <option (click)="setCurrentColor(color)" 
+  routerLink="cars/getcarsdetails/color/{{color.colorId}}"
+  *ngFor="let color of colors" 
+  [class]="getCurrentColorClass(color)">{{color.colorName}}</option>
+</select>
+
+
+
+

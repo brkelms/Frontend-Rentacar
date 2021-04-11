@@ -1,0 +1,20 @@
+
+
+<div *ngFor="let car of cars" class="card" style="width: 25rem; margin-top:1rem;">
+    <img [src]="findPicture(car.imagePath)" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><strong>{{car.carName  | uppercase}}</strong> </h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Marka: {{car.brandName}} </li>
+      <li class="list-group-item">Model Yılı: {{car.modelYear}}</li>
+      <li class="list-group-item">Renk: {{car.colorName}} </li>
+      <li class="list-group-item">Ücret: {{ car.dailyPrice |currency }}</li>
+      <li class="list-group-item">KDV'li Ücret: {{ car.dailyPrice |vatAdded:18 |currency }}</li>
+      <li class="list-group-item">Açıklama: {{car.description}} </li>
+      <li class="list-group-item">Durumu: {{car.description}} </li>
+    </ul>
+    <div class="card-body">
+      <button type="button" class="btn btn-warning" routerLink="/rent-car/car/{{car.carId}}">Kirala</button>
+    </div>
+  </div>

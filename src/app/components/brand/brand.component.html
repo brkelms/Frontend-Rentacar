@@ -1,0 +1,8 @@
+<select class="form-select" aria-label="Default select example">
+    <option [class]="getAllBrandClass()" routerLink="/cars/getcarsdetails" selected>Tüm Markalar</option>
+    <option (click)="setCurrentBrand(brand)" 
+    routerLink="cars/getcarsdetails/brand/{{brand.brandId}}"
+    *ngFor="let brand of brands" 
+    [class]="getCurrentBrandClass(brand)" >{{brand.brandName}}</option>
+
+  </select>

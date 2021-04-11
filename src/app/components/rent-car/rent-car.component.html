@@ -1,0 +1,57 @@
+<body class="text-center"> 
+
+  <div class="col-md-4" *ngFor="let car of cars">
+    <form >
+      <h1 class="h3 mb-3 fw-normal">Seçilen Araç Bilgileri</h1>
+      <figure class="figure">
+        <img [src]="findPicture(car.imagePath)" class="figure-img img-fluid rounded" alt="...">
+        <figcaption class="figure-caption"></figcaption>
+      </figure>
+      <label>Araba Adı</label>
+      <input class="form-control" type="text" placeholder="{{car.carName}}" aria-label="Disabled input example" disabled>
+
+      <label>Model Yılı</label>
+      <input class="form-control" type="text" placeholder="{{car.modelYear}}" aria-label="Disabled input example" disabled>
+
+      <label>Marka</label>
+      <input class="form-control" type="text" placeholder="{{car.brandName}}" aria-label="Disabled input example" disabled>
+
+      <label>Renk</label>
+      <input class="form-control" type="text" placeholder="{{car.colorName}}" aria-label="Disabled input example" disabled>
+
+      <label>Açıklama</label>
+      <input class="form-control" type="text" placeholder="{{car.description}}" aria-label="Disabled input example" disabled>
+        </form>
+  </div>
+
+  <div class="col-md-8">
+    <main class="form-signin">
+      <form [formGroup]="rentCarForm" >
+        <h1 class="h3 mb-3 fw-normal">Kiralama ve Ödeme İşlemi</h1>
+        <div class="form-floating mb-2">
+          <input formControlName="cardNumber"  type="text" class="form-control" id="floatingInput" placeholder="Kart Numarası">
+         <label for="floatingInput">Kart Numarası</label> 
+        </div>
+        <div class="form-floating mb-2">
+          <input formControlName="cardOwner"  type="text" class="form-control" id="floatingInput" placeholder="Kart Sahibinin Adı Soyadı">
+          <label for="floatingInput">Kart Sahibinin Adı Soyadı</label>
+        </div> 
+        <div class="form-floating mb-2">
+            <input formControlName="expiration"  type="text" class="form-control" id="floatingInput" placeholder="Son Kullanma Tarihi">
+            <label for="floatingInput">Son Kullanma Tarihi</label>
+          </div>
+        <div class="form-floating mb-2">
+            <input formControlName="securityCode"  type="text" class="form-control" id="floatingInput" placeholder="Kart Güvenlik Kodu">
+            <label for="floatingInput">Kart Güvenlik Kodu</label>
+          </div>
+          <div *ngFor="let car of cars">
+            <label>Günlük Ücreti (KDV dahil): {{car.dailyPrice | vatAdded:18 |currency}}</label>
+            <button class="w-100 btn btn-lg btn-primary" (click)="sales(car)" type="submit" >Öde</button>
+          </div>
+      </form>
+    </main>
+  </div>
+
+
+      </body>
+

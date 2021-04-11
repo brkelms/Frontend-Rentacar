@@ -1,0 +1,28 @@
+<form>
+    <div class="mb-3">
+        <select class="form-select" >
+            <option  selected>Tüm Renkler</option>
+            <option value="{{color.colorId}}" 
+            *ngFor="let color of colors" 
+            >{{color.colorName}}</option>
+          </select>
+    </div>
+    <div class="mb-3">
+        <select class="form-select" >
+            <option selected>Tüm Markalar</option>
+            <option value="{{brand.brandId}}"
+            *ngFor="let brand of brands" 
+             >{{brand.brandName}}</option>
+          </select>
+    </div>
+    <div>
+        <button type="button" class="btn btn-warning"> Göster </button>
+    </div>
+
+    
+</form>
+
+
+
+
+

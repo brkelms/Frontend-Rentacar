@@ -1,0 +1,18 @@
+<table *ngIf="dataLoad==true" class="table">
+    <thead>
+      <tr>
+        <th>Araba Adı</th>
+        <th>Adı Soyadı</th>
+        <th>Alım Tarihi</th>
+        <th>Teslim Tarihi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rental of rentals">
+        <td>{{ rental.carName | uppercase}}</td>
+        <td>{{ rental.userName }}</td>
+        <td>{{ rental.rentDate }}</td>
+        <td>{{ rental.returnDate | nullPipe }}</td>
+      </tr>
+    </tbody>
+  </table>
