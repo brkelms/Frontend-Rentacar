@@ -3,7 +3,6 @@ Rent A Car Projem
 
 İşlevlerde bazı eksiklikler var. Refactor edilmesi gereken birkaç yer var. Frontend'te güzel bir template yok. Projeyi bitirmek için zamanım yetmedi, bu zamana kadarki ödevleri yapıp da son ödevi göndermemek istemedim, bu nedenle yaptığım yere kadar gönderiyorum.
 
-linkedin:www.linkedin.com/in/burak-elmas-a91b631b8
 
 Araba Listeleme ve Detay Sayfası
 
