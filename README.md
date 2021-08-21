@@ -1,9 +1,6 @@
 Rent A Car Projem
 
 
-İşlevlerde bazı eksiklikler var. Refactor edilmesi gereken birkaç yer var. Frontend'te güzel bir template yok. Projeyi bitirmek için zamanım yetmedi, bu zamana kadarki ödevleri yapıp da son ödevi göndermemek istemedim, bu nedenle yaptığım yere kadar gönderiyorum.
-
-
 Araba Listeleme ve Detay Sayfası
 
 ![carListed](https://user-images.githubusercontent.com/77552278/114307385-0d3b1c80-9ae8-11eb-8857-1f80a0f4812a.png)
